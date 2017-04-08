@@ -18,6 +18,14 @@ div.header {
     display: inline-flex;
 }
 
+div.sidepane {
+    position: relative;
+    background: green;
+    width: 150px;
+    height: 100%;
+    display: inline-flex;
+}
+
 div.content {
     position: relative;
     background: #222222;
