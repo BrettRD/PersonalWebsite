@@ -18,6 +18,13 @@ div.header {
     display: inline-flex;
 }
 
+div.block {
+    position: relative;
+    background: #DDDDDD;
+    width: 100%;
+    display: inline-flex;
+}
+
 div.sidepane {
     position: relative;
     background: green;
