@@ -5,9 +5,9 @@
 {% if post.published_date %}
         <div class="date">
             <p>published:</p>
-            <p class="day">{{ post.published_date|date:'d' }}</p>
-            <p class="month">{{ post.published_date|date:'m' }}</p>
-            <p class="year">{{ post.published_date|date:'Y' }}</p>
+            <div class="day">{{ post.published_date|date:'d' }}</div>
+            <div class="month">{{ post.published_date|date:'m' }}</div>
+            <div class="year">{{ post.published_date|date:'Y' }}</div>
         </div>
 
     {% if user.is_authenticated %}
@@ -16,9 +16,9 @@
 {% else %}
         <div class="date">
             <p>created:</p>
-            <p class="day">{{ post.created_date|date:'d' }}</p>
-            <p class="month">{{ post.created_date|date:'m' }}</p>
-            <p class="year">{{ post.created_date|date:'Y' }}</p>
+            <div class="day">{{ post.created_date|date:'d' }}</div>
+            <div class="month">{{ post.created_date|date:'m' }}</div>
+            <div class="year">{{ post.created_date|date:'Y' }}</div>
         </div>
     {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
