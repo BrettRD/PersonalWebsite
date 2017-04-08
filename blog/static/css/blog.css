@@ -11,11 +11,12 @@ div.container{
 
 div.header {
     position: relative;
-
     background: yellow;
     width: 100%;
     height: 50px;
     display: inline-flex;
+    font-size: 10pt;
+    color: #ffffff;
 }
 
 div.block {
@@ -37,7 +38,6 @@ div.content {
     position: relative;
     background: #222222;
     display: inline-grid;
-    width:85%;
 }
 
 div.footer {
@@ -48,13 +48,6 @@ div.footer {
     display: inline-flex;
 }
 
-div.date {
-    background: blue;
-    width: 50px;
-    height:70px;
-    position: relative;
-    display: inline-flex;
-}
 
 div.article_outer {
     background: rgb(98, 196, 255);
@@ -84,15 +77,23 @@ div.text {
     display: block;
 }
 
+div.date {
+    background: blue;
+    width: 50px;
+    height:70px;
+    display: block;
+    float: left;
+}
+
 p.day{
     display: block;
     width:100%;
-
+    font-size: 15pt;
 }
 p.month{
     display: block;
     width:100%;
-
+    font-size: 13pt;
 }
 p.year{
     display: block;
@@ -111,7 +112,7 @@ p.year{
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
-    font-size: 26pt;
+    font-size: 10pt;
     margin-right: 20px;
 }
 
@@ -124,5 +125,6 @@ div.post{
     display: block;
     width:90%;
     margin-top:10px;
-    display: inline-grid;
+    display: block;
+    float: left;
 }
