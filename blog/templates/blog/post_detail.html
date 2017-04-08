@@ -3,12 +3,23 @@
 {% block content %}
     <div class="post">
 {% if post.published_date %}
-        <p class="date">published: {{ post.published_date|date:'d-m-Y' }}</p>
+        <div class="date">
+            <p>published:</p>
+            <p class="day">{{ post.published_date|date:'d' }}</p>
+            <p class="month">{{ post.published_date|date:'m' }}</p>
+            <p class="year">{{ post.published_date|date:'Y' }}</p>
+        </div>
+
     {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_unpublish' pk=post.pk %}">Hide</a>
     {% endif %}
 {% else %}
-        <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
+        <div class="date">
+            <p>created:</p>
+            <p class="day">{{ post.created_date|date:'d' }}</p>
+            <p class="month">{{ post.created_date|date:'m' }}</p>
+            <p class="year">{{ post.created_date|date:'Y' }}</p>
+        </div>
     {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
         <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">Delete</a>
@@ -17,7 +28,15 @@
 
 {% endif %}
 
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <div class="article_outer">
+            <div class="article_inner">
+                <div class="title">
+                    <p><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
+                </div>
+                <div class="text">
+                    <p>{{ post.text|linebreaks }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

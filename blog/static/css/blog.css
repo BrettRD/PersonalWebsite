@@ -1,30 +1,80 @@
 body {
     padding-left: 15px;
-}
-.page-header {
-    background-color: #005500;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    margin: 0;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+div.container{
+    position: relative;
+    width: 100%;
+    display: block;
 }
 
-.content {
-    margin-left: 40px;
+div.header {
+    position: relative;
+
+    background: yellow;
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
 }
 
-/*
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+div.content {
+    position: relative;
+    background: #222222;
+    display: inline-grid;
+    /*width:85%;*/
 }
-*/
 
-.date {
-    color: #828282;
+div.date {
+    background: blue;
+    width: 50px;
+    height:70px;
+    position: relative;
+    display: inline-flex;
+}
+
+div.article_outer {
+    background: rgb(98, 196, 255);
+    width:90%;
+    position: relative;
+    display: inline-flex;
+}
+div.article_inner {
+    background: rgb(50, 100, 255);
+    width:100%;
+    position: relative;
+    display: block;
+}
+
+
+div.title {
+    background: rgb(98, 196, 255);
+    width:100%;
+    position: relative;
+    display: block;
+}
+
+div.text {
+    background: rgb(98, 196, 255);
+    width:100%;
+    position: relative;
+    display: block;
+}
+
+p.day{
+    display: block;
+    width:100%;
+
+}
+p.month{
+    display: block;
+    width:100%;
+
+}
+p.year{
+    display: block;
+    width:100%;
+
 }
 
 .save {
@@ -42,10 +92,14 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 
-.post {
-    margin-bottom: 70px;
+div.post h1 a, div.post h1 a:visited {
+    color: #000000;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+div.post{
+    position: relative;
+    display: block;
+    width:90%;
+    margin-top:10px;
+    display: inline-grid;
 }

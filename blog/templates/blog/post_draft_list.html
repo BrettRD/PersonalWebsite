@@ -1,11 +1,23 @@
 {% extends 'blog/base.html' %}
-
 {% block content %}
     {% for post in posts %}
         <div class="post">
-            <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
-            <h1><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|truncatechars:200 }}</p>
+            <div class="date">
+                <p>created:</p>
+                <p class="day">{{ post.created_date|date:'d' }}</p>
+                <p class="month">{{ post.created_date|date:'m' }}</p>
+                <p class="year">{{ post.created_date|date:'Y' }}</p>
+            </div>
+            <div class="article_outer">
+                <div class="article_inner">
+                    <div class="title">
+                        <p><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></p>
+                    </div>
+                    <div>
+                        <p>{{ post.text|truncatechars:200 }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     {% endfor %}
 
